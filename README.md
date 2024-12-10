@@ -7,18 +7,19 @@ This Ansible role automates the steps required to set up a Kubernetes cluster. I
 Installing Kubernetes packages (kubeadm, kubelet, kubectl)
 Setting up necessary configurations
 Running kubeadm init to initialize the cluster
-🛠️ Prerequisites
+
+# 🛠️ Prerequisites
 Before running this role, ensure that you have:
 
 Ansible installed on your local machine.
 SSH access to your target server(s) configured.
 A properly set up inventory file with the target server(s).
 Ensure that the target server has sufficient system resources for Kubernetes installation.
-🏗️ Requirements
+# 🏗️ Requirements
 You must have the following tools and dependencies:
 
 Ansible >= 2.x
-A compatible OS (Ubuntu/Debian or CentOS/RHEL) on the target server(s).
+A compatible OS (Ubuntu/Debian or CentOS/RHEL) on the target server(s). In my case i use Ubuntu
 📂 Directory Structure
 The repository has the following directory structure:
 
@@ -38,7 +39,7 @@ Copy code
 ├── playbook.yml
 └── README.md
 
-🖥️ How to Use
+# 🖥️ How to Use
 1. Clone the Repository
 First, clone the repository:
 
@@ -46,6 +47,7 @@ bash
 Copy code
 git clone git@github.com:malthaf9/kubernetes-setup-ansible.git
 cd kubernetes-setup-ansible
+
 2. Set Up Your Inventory
 Edit the inventory/hosts file to include your target server(s):
 
@@ -72,13 +74,14 @@ Copy code
   become: true
   roles:
     - k8s-init
-✨ Role Features
+# ✨ Role Features
 The role performs these steps:
 
-Installs Kubernetes packages using package managers (apt or yum) depending on the target server's OS.
-Runs kubeadm init to initialize Kubernetes.
-Sets up kubectl configuration for the user.
-Ensures that the cluster is in a ready state for further operations.
+-> Installs Kubernetes packages using package managers (apt or yum) depending on the target server's OS.
+-> Runs kubeadm init to initialize Kubernetes.
+-> Sets up kubectl configuration for the user.
+-> Ensures that the cluster is in a ready state for further operations.
+
 🔑 Variables
 You can override default variables by creating a vars.yml file or using the --extra-vars flag:
 
@@ -93,14 +96,13 @@ Run the playbook with custom variables:
 bash
 Copy code
 ansible-playbook -i inventory playbook.yml --extra-vars "@vars.yml"
-📜 License
-MIT License
 
-🤝 Contributing
+
+# 🤝 Contributing
 If you find any issues, have suggestions, or would like to contribute, feel free to open an issue or create a pull request!
 
-💬 Questions/Feedback
+# 💬 Questions/Feedback
 If you have questions, feedback, or need assistance, contact me via GitHub Issues.
 
-🎉 Happy Deploying! 🚀
+# 🎉 Happy Deploying! 🚀
 Kubernetes is ready for action. 🐳 Let's manage your clusters with ease!
