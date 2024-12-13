@@ -1,5 +1,5 @@
 # 🚀 Kubernetes Initialization with Ansible Role
-This repository contains an Ansible role designed to initialize and set up a Kubernetes cluster on a target server.
+This repo contains an Ansible role designed to initialize and set up a Kubernetes cluster on a target server.
 
 # 📜 Overview
 This Ansible role automates the steps required to set up a Kubernetes cluster. It performs tasks such as:
